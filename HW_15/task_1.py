@@ -13,6 +13,6 @@ class Person:
     def talk (self):
         print(f'Hello, my name is {self.firstname} {self.lastname} and I’m {self.age} years old')
 my_person = Person('Carl', 'Johnson', '26')
-print(my_person.talk())
+(my_person.talk())
 
 #не знаю почему высвечивает None в консоли

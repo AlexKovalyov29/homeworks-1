@@ -73,4 +73,4 @@ print(controller.current_channel())
 print(controller.exists(4))
 print(controller.exists("BBC"))
 
-# СТРУКТУРА ПОДСМОТРЕНА :(
+# СТРУКТУРА ПОДСМОТРЕНА :<(
