@@ -6,15 +6,18 @@ For example:
 the call make_operation('+', 7, 7, 2) should return 16
 the call make_operation('-', 5, 5, -10, -20) should return 30
 the call make_operation('*', 7, 6) should return 42  """
-
-def make_operation_sum (x,y):
-    return x+y+x
-print(make_operation_sum(7,2))
-
-def make_operation_subtraction (x,y,s):
-    return x-x-y-s
-print(make_operation_subtraction(5,-10,-20))
-
-def make_operation_multiplication (x,y):
-    return x*y
-print(make_operation_multiplication(7,6))
+def make_operation(operator, *args):
+    if operator == '+':
+        return sum(args)
+    elif operator == '-':
+        return args[0] - sum(args[1:])
+    elif operator == '*':
+        result = 1
+        for arg in args:
+            result *= arg
+        return result
+    else:
+        return None
+print(make_operation('+', 7, 7, 2))
+print(make_operation('-', 5, 5, -10, -20))
+print(make_operation('*', 7, 6))
